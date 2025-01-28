@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Essential code to implement responsiveness and the domain name of the website-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Weather</title>
+        <!--Linking of CSS file and website "font-awesome", where icons for h1 and the error message will come from-->
+        <link rel="stylesheet" href="./style1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    </head>
+    <body>
+        <!--Website name on the top of the web page-->
+     <div class="title">
+        <h1>My Weather <i class="fa-duotone fa-regular fa-sun"></i></h1>
+     </div>
+     <!--Search bar where a city name is entered to get weather information-->
+     <main>
+        <div class="card">
+            <form action="">
+                <input type="text" placeholder="Enter your city" autocomplete="off" id="search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <!--Error message and image that will be presented should an invalid city name be written-->
+            <div class="location-not-found">
+                <h1>Sorry, we couldn't find your location...</h1>
+                <img src="icons/error.image1.jpg" alt="">
+            </div>
+            <!--Results containing basic weather information after input-->
+            <section class="result">
+                <figure class="name" id="city">
+                    <figcaption>London</figcaption>
+                    <img src="https://flagsapi.com/GB/shiny/32.png" alt="">
+                </figure>
+                <figure class="temperature" id="temperature">
+                    <img id="weathericon" src="http://openweathermap.org/img/wn/10d@4x.png" alt="">
+                    <figcaption>
+                        <span>14.69&#176</span>
+                    </figcaption>
+                </figure>
+                <p class="description">
+                    Overcast Clouds
+                </p>
+                <!--Additional additional weather information after input-->
+                <ul>
+                    <li>
+                        <span>Clouds</span>
+                        <i class="fa-solid fa-cloud"></i>
+                        <span id="clouds">98</span>%
+                    </li>
+                    <li>
+                        <span>Humidity</span>
+                        <i class="fa-solid fa-droplet"></i>
+                        <span id="humidity">55</span>%
+                    </li>
+                    <li>
+                        <span>Pressure</span>
+                        <i class="fa-solid fa-gauge"></i>
+                        <span id="pressure">1001</span>hPa
+                    </li>
+                </ul>
+            </section>
+        </div>
+     </main>
+        <!--Linking of the JavaScript file-->
+     <script src="./script1.js"></script>
+    </body>
+</html>
